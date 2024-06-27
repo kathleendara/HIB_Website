@@ -49,8 +49,8 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #19191a;
-  color: #fff;
+  background: #444444;
+  color: #cd303d;
 }
 
 .back-to-top.active {
@@ -592,6 +592,55 @@ section {
   font-family: "Poppins", sans-serif;
   color: #2a2c39;
 }
+.section-title-white h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title-white h2::after {
+  content: "";
+  width: 120px;
+  height: 3px;
+  display: inline-block;
+  background: #cd303d;
+  margin: 4px 10px;
+}
+
+.section-title-white p {
+  margin: 0;
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.section-lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.section-lines .line {
+  flex-grow: 1;
+  height: 3px;
+  background-color: #cd303d;
+  margin: 0 10px;
+}
+
+.section-lines p {
+  margin: 0;
+  padding: 0 10px;
+}
 
 /*--------------------------------------------------------------
 # About
@@ -653,18 +702,29 @@ section {
   color: #fff;
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  .center-text {
+    text-align: center;
+  }
+}
 
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  padding-bottom: 80px 0;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  background: #19191a;
 }
 
 .cta h3 {
   font-size: 20px;
   font-weight: 700;
-  color: #19191a;
+  color: #fff;
+}
+.cta p {
+  color: #fff;
+  font-size: 14px;
 }
 
 .cta .cta-btn {
@@ -700,13 +760,105 @@ section {
     justify-content: flex-end;
   }
 }
+/* Center the paragraph on mobile devices */
+@media (max-width: 768px) {
+  .center-text {
+    text-align: center !important;
+  }
+}
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+
+.testimonials .testimonials-carousel,
+.testimonials .testimonials-slider {
+  overflow: hidden;
+}
+
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
+  color: #fedac0;
+  font-size: 26px;
+}
+
+.testimonials .testimonial-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+.testimonials .testimonial-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+}
+
+.testimonials .testimonial-item p {
+  font-style: italic;
+  margin: 0 auto 15px auto;
+}
+
+.testimonials .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #cd303d;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #cd303d;
+}
+
+.testimonials .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 150%;
+}
+
+.testimonials .title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #2a2c39;
+}
+
+.testimonials .title a {
+  color: #2a2c39;
+  transition: ease-in-out 0.3s;
+}
+
+.testimonials .title a:hover {
+  color: #cd303d;
+}
+
+.testimonials .description {
+  font-size: 14px;
+  line-height: 24px;
+  color: #2a2c39;
+  text-align: start;
+}
+@media (max-width: 768px) {
+  .testimonials .description {
+    text-align: center;
+  }
+}
 
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 .services {
   padding-top: 80px;
-  background: #19191a;
 }
 
 .services .icon-box {
@@ -714,7 +866,6 @@ section {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  background: #19191a;
   box-shadow: 0 2px 29px 0 rgba(68, 88, 144, 0.12);
   transition: all 0.4s ease-in-out;
   width: 100%;
@@ -741,7 +892,7 @@ section {
 .services .title {
   font-weight: 700;
   font-size: 18px;
-  color: #fff;
+  color: #2a2c39;
 }
 
 .services .title a {
@@ -756,7 +907,8 @@ section {
 .services .description {
   font-size: 14px;
   line-height: 24px;
-  color: #fff;
+  color: #2a2c39;
+  text-align: start;
 }
 .services .btn-get-started {
   font-family: "Raleway", sans-serif;
@@ -776,6 +928,77 @@ section {
   background: #fff;
   color: #cd303d;
   font-weight: bold;
+}
+/*--------------------------------------------------------------
+# specialty
+--------------------------------------------------------------*/
+
+.specialty {
+  padding-top: 80px;
+  background: #19191a;
+}
+.specialty .details {
+  color: #fff;
+}
+.specialty .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  color: #fff;
+  animation-delay: 0.8s;
+  background: #cd303d;
+}
+
+.specialty h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+.specialty p {
+  color: #fff;
+  text-align: start;
+}
+.specialty img {
+  padding: 0;
+  margin: 0;
+  max-height: 80px;
+}
+.specialty .number {
+  margin-bottom: 20px;
+}
+
+.underline {
+  position: relative;
+  display: block; /* Ensure it takes the full width of the parent */
+  width: 100%; /* Match the width of the parent */
+}
+
+.underline::after {
+  content: "";
+  display: block;
+  width: 100%; /* Adjust as needed */
+  height: 3px; /* Thickness of the line */
+  background: #cd303d; /* Color of the line */
+  margin-top: 5px; /* Space between the h3 and the line */
+}
+
+@media (max-width: 768px) {
+  #specialty {
+    text-align: center;
+  }
+  .specialty h3 {
+    text-align: center;
+  }
+  .specialty p {
+    text-align: center;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -990,6 +1213,22 @@ section {
   padding: 50px 0;
 }
 
+.footer .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove underline from link */
+}
+
+.footer .footerLogo-img {
+  height: 150px; /* Adjust as needed */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.footer .logo span {
+  font-size: 24px; /* Adjust as needed */
+  font-weight: bold; /* Adjust as needed */
+  color: #000; /* Adjust text color as needed */
+}
 .footer .footer-info .logo {
   line-height: 0;
   margin-bottom: 25px;
@@ -1131,8 +1370,8 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #bd5102;
-  color: #fff;
+  background: #fff;
+  color: #cd303d;
   text-decoration: none;
 }
 
