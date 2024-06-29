@@ -12,7 +12,7 @@ a {
 }
 
 a:hover {
-  color: #19191a;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -75,7 +75,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: #19191a;
+  background: #000000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,7 +86,7 @@ h6 {
 }
 
 #header.header-scrolled {
-  background: #19191a;
+  background: #000000;
 }
 
 #header .logo h1 {
@@ -648,6 +648,25 @@ section {
 .about {
   padding-top: 80px;
 }
+.custom-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-img {
+  max-width: 100%;
+  height: auto;
+}
+.service-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service-img {
+  max-width: 100%;
+  height: auto;
+}
 
 .about .content h3 {
   font-weight: 600;
@@ -706,7 +725,16 @@ section {
   .center-text {
     text-align: center;
   }
+  .custom-img {
+    max-width: 300px; /* Adjust for smaller screens */
+  }
+  .service-img {
+    text-align: center;
+  }
 }
+/*--------------------------------------------------------------
+# pageWrapper
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Cta
@@ -714,7 +742,7 @@ section {
 .cta {
   padding-bottom: 80px;
   padding-top: 80px;
-  background: #19191a;
+  background: #000000;
 }
 
 .cta h3 {
@@ -855,6 +883,31 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Map
+--------------------------------------------------------------*/
+
+/* Style for the map section */
+.map {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+/* Style for the container */
+.map .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+/* Style for the iframe */
+.map-iframe {
+  width: 100%;
+  height: 500px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 .services {
@@ -935,7 +988,7 @@ section {
 
 .specialty {
   padding-top: 80px;
-  background: #19191a;
+  background: #000000;
 }
 .specialty .details {
   color: #fff;
@@ -1125,7 +1178,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #19191a;
+  background: #000000;
 }
 
 @keyframes animate-loading {
@@ -1151,7 +1204,7 @@ section {
 
 .breadcrumbs .page-header:before {
   content: "";
-  background-color: rgba(14, 29, 52, 0.8);
+  background: rgb(11 12 12 / 70%);
   position: absolute;
   inset: 0;
 }
@@ -1168,7 +1221,7 @@ section {
 }
 
 .breadcrumbs nav {
-  background-color: #f3f6fc;
+  background-color: #d1333e;
   padding: 20px 0;
 }
 
@@ -1184,7 +1237,7 @@ section {
 }
 
 .breadcrumbs nav ol a {
-  color: #cd303d;
+  color: #fff;
   font-weight: bold;
   transition: 0.3s;
 }
@@ -1204,10 +1257,72 @@ section {
   content: "/";
 }
 /*--------------------------------------------------------------
+# ABout us
+--------------------------------------------------------------*/
+.aboutPage {
+  padding-top: 80px;
+  background: #000000;
+}
+
+.aboutPage .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #fff;
+}
+.aboutPage .content p {
+  color: #fff;
+  font-size: 14px;
+}
+
+.aboutPage .content .btn-learn-more:hover {
+  background: #cd303d;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .aboutPage {
+    text-align: center;
+  }
+  .service-img {
+    text-align: center;
+  }
+}
+/*--------------------------------------------------------------
+# service page
+--------------------------------------------------------------*/
+.servicePage {
+  padding-top: 80px;
+}
+
+.servicePage .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #cd303d;
+}
+.servicePage .content p {
+  color: #000;
+  font-size: 14px;
+}
+
+.servicePage .content .btn-learn-more:hover {
+  background: #cd303d;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .servicePage {
+    text-align: center;
+  }
+  .service-img {
+    text-align: center;
+  }
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #19191a;
+  background: #000000;
   color: #fff;
   font-size: 14px;
   padding: 50px 0;
@@ -1381,4 +1496,10 @@ section {
 
 #footer .credits {
   font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .social-links a {
+    text-align: center;
+  }
 }
