@@ -742,7 +742,7 @@ section {
 .cta {
   padding-bottom: 80px;
   padding-top: 80px;
-  background: #000000;
+  background: #181818;
 }
 
 .cta h3 {
@@ -876,6 +876,26 @@ section {
   color: #2a2c39;
   text-align: start;
 }
+
+.testimonials .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  color: #fff;
+  animation-delay: 0.8s;
+  background: #cd303d;
+}
+.testimonials .btn-get-started:hover {
+  background: #cdcdcd;
+  color: #cd303d;
+  font-weight: bold;
+}
 @media (max-width: 768px) {
   .testimonials .description {
     text-align: center;
@@ -888,7 +908,6 @@ section {
 
 /* Style for the map section */
 .map {
-  padding: 50px 0;
   background-color: #f8f9fa;
 }
 
@@ -912,6 +931,7 @@ section {
 --------------------------------------------------------------*/
 .services {
   padding-top: 80px;
+  background: #f8f8fa;
 }
 
 .services .icon-box {
@@ -962,25 +982,6 @@ section {
   line-height: 24px;
   color: #2a2c39;
   text-align: start;
-}
-.services .btn-get-started {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 14px 32px;
-  border-radius: 50px;
-  transition: 0.5s;
-  line-height: 1;
-  color: #fff;
-  animation-delay: 0.8s;
-  background: #cd303d;
-}
-.services .btn-get-started:hover {
-  background: #fff;
-  color: #cd303d;
-  font-weight: bold;
 }
 /*--------------------------------------------------------------
 # specialty
@@ -1057,9 +1058,11 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact {
+  background: whitesmoke;
+}
 .contact .info {
   width: 100%;
-  background: #fff;
 }
 
 .contact .info i {
@@ -1068,7 +1071,7 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  background: #ffecde;
+  background: whitesmoke;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1105,7 +1108,7 @@ section {
 
 .contact .php-email-form {
   width: 100%;
-  background: #fff;
+  background: whitesmoke;
 }
 
 .contact .php-email-form .form-group {
@@ -1192,6 +1195,143 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Map
+--------------------------------------------------------------*/
+.mapContainer .info {
+  width: 100%;
+  background: #fff;
+}
+
+.mapContainer .info i {
+  font-size: 20px;
+  color: #cd303d;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #ffecde;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.mapContainer .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #2a2c39;
+}
+
+.mapContainer .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #555974;
+}
+
+.mapContainer .info .email,
+.mapContainer .info .phone {
+  margin-top: 40px;
+}
+
+.mapContainer .info .email:hover i,
+.mapContainer .info .address:hover i,
+.mapContainer .info .phone:hover i {
+  background: #cd303d;
+  color: #fff;
+}
+
+.mapContainer .php-email-form {
+  width: 100%;
+  background: #fff;
+}
+
+.mapContainer .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.mapContainer .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.mapContainer .php-email-form .error-message br + br {
+  margin-top: 25px;
+}
+
+.mapContainer .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.mapContainer .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.mapContainer .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+.mapContainer .php-email-form input,
+.mapContainer .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.mapContainer .php-email-form input {
+  height: 44px;
+}
+
+.mapContainer .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.mapContainer .php-email-form button[type="submit"] {
+  background: #cd303d;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.mapContainer .php-email-form button[type="submit"]:hover {
+  background: #000000;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs .page-header {
@@ -1260,8 +1400,12 @@ section {
 # ABout us
 --------------------------------------------------------------*/
 .aboutPage {
-  padding-top: 80px;
-  background: #000000;
+  padding-bottom: 0px;
+  background: #f8f8fa;
+}
+.aboutPage .container {
+  padding-bottom: 50px;
+  background: #f8f8fa;
 }
 
 .aboutPage .content h3 {
@@ -1270,8 +1414,7 @@ section {
   color: #fff;
 }
 .aboutPage .content p {
-  color: #fff;
-  font-size: 14px;
+  color: #000;
 }
 
 .aboutPage .content .btn-learn-more:hover {
@@ -1287,11 +1430,46 @@ section {
     text-align: center;
   }
 }
+
+/*--------------------------------------------------------------
+# service column1
+--------------------------------------------------------------*/
+.serviceColumn {
+  padding-bottom: 0px;
+  padding-top: 60px;
+}
+.serviceColumn .container {
+  background: #f8f8fa;
+}
+
+.serviceColumn .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+  color: #fff;
+  align-items: center;
+}
+.serviceColumn .content p {
+  color: #000;
+}
+
+.serviceColumn .content .btn-learn-more:hover {
+  background: #cd303d;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .serviceColumn {
+    text-align: center;
+  }
+  .service-img {
+    text-align: center;
+  }
+}
 /*--------------------------------------------------------------
 # service page
 --------------------------------------------------------------*/
 .servicePage {
-  padding-top: 80px;
+  padding-bottom: 0px;
 }
 
 .servicePage .content h3 {
@@ -1331,18 +1509,18 @@ section {
 .footer .logo {
   display: flex;
   align-items: center;
-  text-decoration: none; /* Remove underline from link */
+  text-decoration: none;
 }
 
 .footer .footerLogo-img {
-  height: 150px; /* Adjust as needed */
-  margin-right: 10px; /* Space between image and text */
+  height: 150px;
+  margin-right: 10px;
 }
 
 .footer .logo span {
-  font-size: 24px; /* Adjust as needed */
-  font-weight: bold; /* Adjust as needed */
-  color: #000; /* Adjust text color as needed */
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
 }
 .footer .footer-info .logo {
   line-height: 0;
@@ -1470,18 +1648,7 @@ section {
 }
 
 #footer .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #cd303d;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
 }
 
 #footer .social-links a:hover {
